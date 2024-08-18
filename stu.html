@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Form</title>
+</head>
+<body>
+    <h2>Student Application Form</h2>
+    <form action="/submit-application" method="post" enctype="multipart/form-data">
+        <!-- Personal Information -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" required><br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+        </fieldset>
+
+        <!-- Educational Background -->
+        <fieldset>
+            <legend>Educational Background</legend>
+            <label for="highschool">High School Name:</label>
+            <input type="text" id="highschool" name="highschool" required><br><br>
+
+            <label for="graduation-year">Year of Graduation:</label>
+            <input type="number" id="graduation-year" name="graduation-year" min="1900" max="2100" required><br><br>
+
+            <label for="gpa">GPA:</label>
+            <input type="text" id="gpa" name="gpa" required><br><br>
+
+            <label for="major">Intended Major:</label>
+            <input type="text" id="major" name="major" required><br><br>
+
+            <label for="extra-curricular">Extra-Curricular Activities:</label>
+            <textarea id="extra-curricular" name="extra-curricular" rows="4" cols="50"></textarea><br><br>
+        </fieldset>
+
+        <!-- Document Uploads -->
+        <fieldset>
+            <legend>Upload Documents</legend>
+            <label for="transcript">Upload High School Transcript:</label>
+            <input type="file" id="transcript" name="transcript" accept=".pdf,.doc,.docx" required><br><br>
+
+            <label for="recommendation-letter">Upload Recommendation Letter:</label>
+            <input type="file" id="recommendation-letter" name="recommendation-letter" accept=".pdf,.doc,.docx"><br><br>
+
+            <label for="photo">Upload Recent Photo:</label>
+            <input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png" required><br><br>
+        </fieldset>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Application">
+    </form>
+</body>
+</html>
