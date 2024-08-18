@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Booking Form</title>
+</head>
+<body>
+    <h2>Train Ticket Booking Form</h2>
+    <form action="/submit-ticket-booking" method="post">
+        <!-- Personal Information -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" required><br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="id-proof">ID Proof Number (e.g., Passport, Driver's License):</label>
+            <input type="text" id="id-proof" name="id-proof" required><br><br>
+        </fieldset>
+
+        <!-- Journey Details -->
+        <fieldset>
+            <legend>Journey Details</legend>
+            <label for="from-station">From Station:</label>
+            <input type="text" id="from-station" name="from-station" required><br><br>
+
+            <label for="to-station">To Station:</label>
+            <input type="text" id="to-station" name="to-station" required><br><br>
+
+            <label for="journey-date">Journey Date:</label>
+            <input type="date" id="journey-date" name="journey-date" required><br><br>
+
+            <label for="train-number">Train Number:</label>
+            <input type="text" id="train-number" name="train-number" required><br><br>
+
+            <label for="class">Class:</label>
+            <select id="class" name="class" required>
+                <option value="first-class">First Class</option>
+                <option value="second-class">Second Class</option>
+                <option value="sleeper">Sleeper</option>
+                <option value="ac">AC</option>
+            </select><br><br>
+
+            <label for="number-of-tickets">Number of Tickets:</label>
+            <input type="number" id="number-of-tickets" name="number-of-tickets" min="1" required><br><br>
+
+            <label for="berth-preference">Berth Preference:</label><br>
+            <input type="radio" id="upper-berth" name="berth-preference" value="upper">
+            <label for="upper-berth">Upper</label><br>
+
+            <input type="radio" id="middle-berth" name="berth-preference" value="middle">
+            <label for="middle-berth">Middle</label><br>
+
+            <input type="radio" id="lower-berth" name="berth-preference" value="lower">
+            <label for="lower-berth">Lower</label><br>
+
+            <input type="radio" id="side-lower-berth" name="berth-preference" value="side-lower">
+            <label for="side-lower-berth">Side Lower</label><br>
+
+            <input type="radio" id="no-preference" name="berth-preference" value="no-preference">
+            <label for="no-preference">No Preference</label><br><br>
+        </fieldset>
+
+        <!-- Payment Information -->
+        <fieldset>
+            <legend>Payment Information</legend>
+            <label for="card-name">Cardholder's Name:</label>
+            <input type="text" id="card-name" name="card-name" required><br><br>
+
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" pattern="\d{16}" placeholder="1234 5678 9012 3456" required><br><br>
+
+            <label for="expiry-date">Expiry Date:</label>
+            <input type="month" id="expiry-date" name="expiry-date" required><br><br>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" pattern="\d{3}" placeholder="123" required><br><br>
+
+            <label for="billing-address">Billing Address:</label>
+            <textarea id="billing-address" name="billing-address" rows="4" cols="50" required></textarea><br><br>
+        </fieldset>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Book Ticket">
+    </form>
+</body>
+</html>
