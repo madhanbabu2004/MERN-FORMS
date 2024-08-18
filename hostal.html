@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Room Application Form</title>
+</head>
+<body>
+    <h2>Hostel Room Application Form</h2>
+    <form action="/submit-hostel-application" method="post">
+        <!-- Personal Information -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" required><br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+
+            <label for="student-id">Student ID:</label>
+            <input type="text" id="student-id" name="student-id" required><br><br>
+
+            <label for="emergency-contact">Emergency Contact:</label>
+            <input type="text" id="emergency-contact" name="emergency-contact" required><br><br>
+
+            <label for="emergency-phone">Emergency Contact Phone:</label>
+            <input type="tel" id="emergency-phone" name="emergency-phone" required><br><br>
+        </fieldset>
+
+        <!-- Room Preferences -->
+        <fieldset>
+            <legend>Room Preferences</legend>
+            <label for="room-type">Preferred Room Type:</label>
+            <select id="room-type" name="room-type" required>
+                <option value="single">Single Room</option>
+                <option value="double">Double Room</option>
+                <option value="shared">Shared Room</option>
+            </select><br><br>
+
+            <label for="accommodation-period">Accommodation Period:</label>
+            <select id="accommodation-period" name="accommodation-period" required>
+                <option value="semester">One Semester</option>
+                <option value="year">One Academic Year</option>
+                <option value="short-term">Short-Term (less than a semester)</option>
+            </select><br><br>
+
+            <label for="move-in-date">Preferred Move-In Date:</label>
+            <input type="date" id="move-in-date" name="move-in-date" required><br><br>
+
+            <label for="roommate-preference">Roommate Preference (if any):</label>
+            <input type="text" id="roommate-preference" name="roommate-preference"><br><br>
+        </fieldset>
+
+        <!-- Additional Information -->
+        <fieldset>
+            <legend>Additional Information</legend>
+            <label for="special-needs">Do you have any special needs or requirements?</label><br>
+            <textarea id="special-needs" name="special-needs" rows="4" cols="50"></textarea><br><br>
+
+            <label for="comments">Additional Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+        </fieldset>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Application">
+    </form>
+</body>
+</html>
